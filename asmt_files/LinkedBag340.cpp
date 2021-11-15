@@ -59,7 +59,7 @@ int LinkedBag<ItemType>::getCurrentSize340Recursive() const{ // look at indirect
 }
 
 template<typename ItemType>
-int LinkedBag<ItemType>::getCurrentSize340RecursiveNoHelper() const{ // need a global variable for NoHelpers (?)
+int LinkedBag<ItemType>::getCurrentSize340RecursiveNoHelper() const{
 /*     int sum;
     Node<ItemType>* curPtr = headPtr;
 
