@@ -2,5 +2,7 @@
 
 // apparently this is supposed to be ONLY #include "----" - Matt
 
-#pragma once
-#include "LinkedBag340.cpp";
+
+#include "iostream"
+#include <memory>
+#include "LinkedBag340.cpp"

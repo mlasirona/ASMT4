@@ -3,8 +3,8 @@
 
 // I HAVE NOT TESTED ANY OF THESE BECAUSE IT WOULDN'T COMPILE, HOPEFULLY THEY DO WHAT IS INTENDED - Matt
 
-#pragma once
-#include "LinkedBag.h";
+
+#include "LinkedBag.h"
 #include "LinkedBag.cpp"
 
 using namespace std;
