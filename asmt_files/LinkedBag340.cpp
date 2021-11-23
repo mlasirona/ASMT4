@@ -37,7 +37,9 @@ int LinkedBag<ItemType>::getFrequencyOf340RecursiveHelper(Node<ItemType>* node, 
 
 template<typename ItemType>
 bool LinkedBag<ItemType>::removeSecondNode340(){ // DONE
-    if(!isEmpty() && headPtr->next != nullptr){
+    bool canRemoveItem = !isEmpty() && (headPtr->getNext() != nullptr);
+
+    if(canRemoveItem){
         Node<ItemType>* toDeletePtr = headPtr->getNext();
 
         headPtr->setNext(toDeletePtr->getNext());
@@ -47,11 +49,9 @@ bool LinkedBag<ItemType>::removeSecondNode340(){ // DONE
         toDeletePtr = nullptr;
 
         itemCount--;
-
-        return true;
     }
 
-    return false;
+    return canRemoveItem;
 }
 
 template<typename ItemType>
