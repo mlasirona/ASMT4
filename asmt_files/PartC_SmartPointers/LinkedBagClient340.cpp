@@ -1,6 +1,7 @@
 //	LinkedBagClient340.cpp
 //	Created by: Duc Ta
 
+#include <memory>
 #include "Include.h"
 //
 //

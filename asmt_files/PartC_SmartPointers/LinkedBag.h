@@ -27,8 +27,8 @@ public:
 	int getFrequencyOf340RecursiveNoHelper(const ItemType&) const;
 	ItemType removeRandom340();
 private:
-	int getCurrentSize340RecursiveHelper(Node<ItemType>*) const; // if needed
-	int getFrequencyOf340RecursiveHelper(Node<ItemType>*, const ItemType&) const; // if needed
+	int getCurrentSize340RecursiveHelper(std::shared_ptr<Node<ItemType>>) const; // if needed
+	int getFrequencyOf340RecursiveHelper(std::shared_ptr<Node<ItemType>>, const ItemType&) const; // if needed
 /*----------------------------------------------------------------------*/
 
 public:
@@ -45,9 +45,9 @@ public:
 	std::vector<ItemType> toVector() const;
 
 private:
-	Node<ItemType>* headPtr{ nullptr }; // Pointer to first node
-	int itemCount{ 0 };					// Current count of bag items
+	std::shared_ptr<Node<ItemType>> headPtr{ nullptr }; // Pointer to first node
+	int itemCount{ 0 };									// Current count of bag items
 
 	// pointer to the node or the null pointer 
-	Node<ItemType>* getPointerTo(const ItemType&) const;
+	std::shared_ptr<Node<ItemType>> getPointerTo(const ItemType&) const;
 };

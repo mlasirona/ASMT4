@@ -3,6 +3,7 @@
 //	Updated by Duc Ta
 //  Copyright (c) 2017 Pearson Education, Hoboken, New Jersey.
 
+#include <iostream>
 #include "Node.h"
 
 //
@@ -27,7 +28,7 @@ void Node<ItemType>::setItem(const ItemType& anItem) {
 }
 
 template<typename ItemType>
-void Node<ItemType>::setNext(Node<ItemType>* nextNodePtr) {
+void Node<ItemType>::setNext(std::shared_ptr<Node<ItemType>> nextNodePtr) {
 	next = nextNodePtr;
 }
 
@@ -37,6 +38,11 @@ ItemType Node<ItemType>::getItem() const {
 }
 
 template<typename ItemType>
-Node<ItemType>* Node<ItemType>::getNext() const {
+std::shared_ptr<Node<ItemType>> Node<ItemType>::getNext() const {
 	return next;
+}
+
+template<typename ItemType>
+Node<ItemType>::~Node() {
+	std::cout << "Node being deleted.." << std::endl;
 }
